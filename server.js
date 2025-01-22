@@ -4,15 +4,15 @@ const port = 4000
 const { default: mongoose } = require('mongoose')
 const app = require('./app.js')
 
-//db connection mongodb atlas
-// mongoose.connect(process.env.CONN_STR)
-// .then((conn)=>console.log("Mongodb connected"))
-// .catch((error)=> console.log(error))
-
-//db connection mongodb compass
-mongoose.connect(process.env.CONN_STR_COMPASS)
+// db connection mongodb atlas
+mongoose.connect(process.env.CONN_STR)
     .then((conn) => console.log("Mongodb connected"))
     .catch((error) => console.log(error))
+
+//db connection mongodb compass
+// mongoose.connect(process.env.CONN_STR_COMPASS)
+//     .then((conn) => console.log("Mongodb connected"))
+//     .catch((error) => console.log(error))
 
 app.listen(port, () => {
     console.log(`Online ticket booking backend is listening on port ${port}`)
