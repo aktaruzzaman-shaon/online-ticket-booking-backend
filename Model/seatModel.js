@@ -14,10 +14,7 @@ const ticketSchema = new mongoose.Schema({
     //     type: [Number]
     // },
     seats: {
-        type: [Number],
-        required: true,
-        booked: Boolean,
-
+        type: []
     },
 
 },
