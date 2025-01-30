@@ -7,5 +7,7 @@ ticketsRouter.route('/')
     .post(ticketController.createTicket)
 
 ticketsRouter.route('/:id')
+    .patch(ticketController.updateTicket)
+    .delete(ticketController.deleteTicket)
 
 module.exports = ticketsRouter

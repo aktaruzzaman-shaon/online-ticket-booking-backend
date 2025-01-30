@@ -10,8 +10,14 @@ const ticketSchema = new mongoose.Schema({
         type: String,
         required: [true, " Destination point is required"],
     },
+    // seats: {
+    //     type: [Number]
+    // },
     seats: {
-        type: [Number]
+        type: [Number],
+        required: true,
+        booked: Boolean,
+
     },
 
 },
