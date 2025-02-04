@@ -8,4 +8,4 @@ function response(res, status, data) {
     )
 }
 
-export default response;
+module.exports = response

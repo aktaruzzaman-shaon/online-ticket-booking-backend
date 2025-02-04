@@ -1,6 +1,5 @@
 const Tickets = require("../Model/seatModel")
-const { default: response } = require("../Utility/response")
-
+const response = require("../Utility/response")
 
 exports.getAllTickets = async (req, res) => {
     const data = await Tickets.find()
