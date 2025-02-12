@@ -28,7 +28,7 @@ const ticketSchema = new mongoose.Schema({
     seats: {
         type: [seatSchema],
         required: true,
-    },
+    }
 
 },
     { timestamps: true }

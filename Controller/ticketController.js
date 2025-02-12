@@ -2,12 +2,14 @@ const Tickets = require("../Model/seatModel")
 const response = require("../Utility/response")
 
 exports.getAllTickets = async (req, res) => {
-    const data = await Tickets.find()
+    const { from: startingSite, to: destinationSite } = req.query;
+    const data = await Tickets.find({ from: startingSite, to: destinationSite })
     response(res, 200, data)
 }
 
 exports.createTicket = async (req, res) => {
     const ticketBody = req.body;
+    console.log(ticketBody,"ticket body")
     const data = await Tickets.create(ticketBody)
     response(res, 200, data)
 }
